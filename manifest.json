@@ -1,0 +1,25 @@
+{
+    "name": "Widgets",
+    "version": "1.0.0.0",
+    "manifest_version": 2,
+    "description": "Widgets",
+    "icons": {
+        "128": "icons/icon.png"
+    },
+    "browser_action": {
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": [
+        
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "popup/popup.js"
+            ]
+        }
+    ]
+}

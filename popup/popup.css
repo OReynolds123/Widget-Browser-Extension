@@ -1,0 +1,836 @@
+html {
+    width: 765px;
+    height: 755px;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+}
+.extension {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+}
+#container-ul {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+}
+.container-li {
+    width: auto;
+    height: auto;
+    display: inherit;
+}
+.container-li.dragElem {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+.container {
+    width: 230px;
+    height: 230px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px #c7c7c7ce;
+    background: #ffffff;
+    border-radius: 15px;
+    opacity: 1;
+    border-top: none;
+}
+.large {
+    width: 480px;
+    height: 230px;
+}
+.container-titleDiv {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    cursor: grab;
+}
+.container-title-img {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 5px;
+    width: min-content;
+    height: 20px;
+    fill: #159dec;
+}
+.container-title-text {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000000c0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+.container-body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 190px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Calendar */
+.calendar {
+    width: 100%;
+    height: 100%;
+}
+.calendar:hover .calendar-widget {
+    transform: scale(1.05);
+    transform-origin: top;
+}
+.calendar-widget {
+    width: 100%;
+    height: 100%;
+    background-image: url("images/Logos/bkg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: slategray;
+    filter: blur(1px);
+    transition: .5s ease;
+}
+.calendar-textDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-weight: 200;
+    font-family:  "Courier New", monospace;
+}
+.calendar-dowDiv {
+    text-align: center;
+    margin: 0;
+}
+.calendar-dow {
+    font-size: 12px;
+    vertical-align: middle;
+    color: #ffffff6e;
+}
+.calendar-dow.unblur {
+    color: #ffffffff;
+    font-size: 18px;
+    font-weight: 400;
+}
+.calendar-text {
+    background-color: #00000066;
+    border: 3px solid #ffffff;
+    box-shadow: 0px 0px 10px 1px #00000080;
+    border-radius: 5px;
+    padding: 3px 10px 5px;
+    margin: 0px;
+}
+.calendar-month {
+    font-variant: small-caps;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+.calendar-day {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+/* Weather */
+.weatherWidget {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+.weatherWidget_topDiv {
+    width: 100%;
+    height: 40%;
+    column-count: 3;
+}
+.weatherWidget_location {
+    width: calc(100% - 15px);
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+.weatherWidget_locationText {
+    display: block;
+    line-height: 20px;
+    font-size: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 500;
+}
+.weatherWidget_currIcon {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+.weatherWidget_currIconImg {
+    width: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.weatherWidget_topDiv_rightDiv {
+    width: calc(100% - 15px);
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.weatherWidget_topDiv_rightInnerDiv {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.weatherWidget_currTemp {
+    display: block;
+    font-size: 26px;
+}
+.weatherWidget_currDesc {
+    display: block;
+    font-size: 12px;
+    color: #202124;
+    text-transform: capitalize;
+}
+.weatherWidget_bottomDiv {
+    width: 100%;
+    height: 55%;
+    column-count: 5;
+}
+.weatherWidget_dayDiv {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    color: #202124;
+    border-radius: 8px;
+}
+.weatherWidget_dayDiv:hover {
+    background-color: #f2f3f4;
+}
+.weatherWidget_dayTextDiv {
+    padding-top: 5px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    color: inherit;
+}
+.weatherWidget_dayText {
+    display: block;
+    font-size: 13px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: inherit;
+}
+.weatherWidget_dayIcon {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+.weatherWidget_dayIconImg {
+    width: 35px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.weatherWidget_dayTemps {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    color: inherit;
+}
+.weatherWidget_dayTempsInnerDiv {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: inherit;
+}
+.weatherWidget_dayHigh {
+    display: block;
+    font-size: 13px;
+    color: inherit;
+}
+.weatherWidget_dayLow {
+    display: block;
+    font-size: 13px;
+    color: inherit;
+}
+
+/* Bible */
+.bible {
+    width: 100%;
+    height: 100%;
+}
+.bible:hover .bible-widget {
+    transform: scale(1.05);
+    transform-origin: top;
+}
+.bible-widget {
+    width: 100%;
+    height: 100%;
+    background-image: url("images/Logos/bkg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: slategray;
+    filter: blur(5px);
+    transition: .5s ease;
+}
+.bible-text {
+    text-decoration: none;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    background-color: #00000066;
+    border: 3px solid #ffffff;
+    box-shadow: 0px 0px 10px 1px #00000080;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-weight: 200;
+    font-family:'Segoe UI', sans-serif;
+}
+.bible-verse {
+    margin-top: 2px;
+    font-size: 15px;
+    line-height: 15px;
+}
+.bible-loc {
+    font-weight: 400;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+/* News */
+.newsWidget-outerDiv {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.newsWidget-outerDiv:hover .newsWidget-leftArrow, .newsWidget-outerDiv:hover .newsWidget-rightArrow {
+    display: block;
+}
+.newsWidget-leftArrow, .newsWidget-rightArrow {
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 90;
+}
+.newsWidget-leftArrow {
+    left: 0;
+}
+.newsWidget-rightArrow {
+    right: 0;
+}
+.newsWidget-arrow {
+    width: 25px;
+    height: 25px;
+}
+.newsWidget-newsDiv {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #9c8e8e4f;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+}
+.newsWidget-image {
+    margin: 0;
+    padding: 0;
+    float: none;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url("images/Logos/Breitbart.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.newsWidget-image:hover {
+    height: 110%;
+}
+.newsWidget-textDiv {
+    width: 100%;
+    height: 25%;
+    background: #ffffff80;
+    transition: height 0.5s, background-color 0.5s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-decoration: none;
+    font-family: Roboto,Arial,sans-serif;
+}
+.newsWidget-textDiv:hover {
+    cursor: pointer;
+    height: 100%;
+    background: #ffffffcc;
+}
+.newsWidget-textDiv:hover .newsWidget-title {
+    text-overflow: unset;
+    overflow: visible;
+    white-space: normal;
+    font-size: 12px;
+    line-height: 13px;
+}
+.newsWidget-textDiv:hover .newsWidget-text{
+    display: block;
+}
+.newsWidget-textDiv:hover .newsWidget-date{
+    font-size: 10px;
+    line-height: 11px;
+}
+.newsWidget-title, .newsWidget-text, .newsWidget-date {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: #000000
+}
+.newsWidget-title {
+    margin-top: 5px;
+    color: #202124;
+    line-height: 20px;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 90%;
+    font-weight: 550;
+}
+.newsWidget-text {
+    display: none;
+    font-size: 11px;
+    line-height: 12px;
+    margin-top: 3px;
+}
+.newsWidget-date {
+    margin-top: 3px;
+    line-height: 14px;
+    font-size: 14px;
+}
+
+/* Light */
+.power-switch {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    background: #2C2B34;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    box-shadow: 0px 0px 5px 0px #444444b6, 0px 0px 0px 15px #86929457;
+}
+.power-switch:hover {
+    background: #35343f;
+}
+.power-switch:active {
+    background: #3D3C45;
+    box-shadow: 0px 10px 10px -5px #727272cc, 0px 0px 0px 25px #86929457;
+    transform: scale(.90);
+}
+.power-switchButton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    filter: drop-shadow(0px 0px 6px #00eeffcc);
+}
+.power-switchButton:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: radial-gradient(circle closest-side, #00eeff56, transparent);
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: perspective(1px) translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.power-on, .power-off {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.power-switchLine {
+    opacity: 0.2;
+}
+.power-switchCircle {
+    opacity: 0.2;
+    transform: rotate(-58deg);
+    transform-origin: center 80px;
+    stroke-dasharray: 220;
+    stroke-dashoffset: 40;
+}
+.power-on {
+    filter: drop-shadow(0px 0px 6px #00eeffcc);
+}
+.power-on .power-switchLine {
+    opacity: 0;
+    transition: opacity 0.3s ease 1s;
+}
+.power-on .power-switchCircle {
+    opacity: 1;
+    stroke-dashoffset: 220;
+    transition: transform 0s ease, stroke-dashoffset 1s ease 0s;
+}
+.power-switch input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+}
+.power-switch input:checked+.power-switchButton:after {
+    opacity: 0.15;
+    transform: scale(2) perspective(1px) translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.power-switch input:checked+.power-switchButton .power-on, .power-switch input:checked+.power-switchButton .power-off {
+    -webkit-animation: click-animation 0.3s ease forwards;
+    animation: click-animation 0.3s ease forwards;
+    transform: scale(1);
+}
+.power-switch input:checked+.power-switchButton .power-on .power-switchLine, .power-switch input:checked+.power-switchButton .power-off .power-switchLine {
+    -webkit-animation: line-animation 0.8s ease-in forwards;
+    animation: line-animation 0.8s ease-in forwards;
+}
+.power-switch input:checked+.power-switchButton .power-on .power-switchCircle, .power-switch input:checked+.power-switchButton .power-off .power-switchCircle {
+    transform: rotate(302deg);
+}
+.power-switch input:checked+.power-switchButton .power-on .power-switchLine {
+    opacity: 1;
+    transition: opacity 0.05s ease-in 0.55s;
+}
+.power-switch input:checked+.power-switchButton .power-on .power-switchCircle {
+    transform: rotate(302deg);
+    stroke-dashoffset: 40;
+    transition: transform 0.4s ease 0.2s, stroke-dashoffset 0.4s ease 0.2s;
+}
+@-webkit-keyframes line-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(10px);
+    }
+
+    40% {
+        transform: translateY(-25px);
+    }
+
+    60% {
+        transform: translateY(-25px);
+    }
+
+    85% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes line-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(10px);
+    }
+
+    40% {
+        transform: translateY(-25px);
+    }
+
+    60% {
+        transform: translateY(-25px);
+    }
+
+    85% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+@-webkit-keyframes click-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes click-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Stocks */
+.portfolioStocksDiv {
+    width: 392px;
+}
+.portfolioStocks-header {
+    width: 100%;
+    text-align: center;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 16px;
+    color: #202124;
+    margin-bottom: 3px;
+}
+.portfolioStocks {
+    width: 100%;
+}
+.portfolioStock-outerDiv {
+    display: inline-block;
+    text-decoration: none;
+    cursor: default;
+}
+.portfolioStock {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    background: white;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    white-space: nowrap;
+    width: 175px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    margin-bottom: 5px;
+}
+.portfolioStock:hover {
+    background-color: #f2f3f4;
+}
+.portfolioStock-arrowDiv {
+    display: flex;
+    height: 32px;
+    min-width: 32px;
+    overflow: hidden;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 32px;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+.portfolioStock-arrow {
+    height: 16px;
+    margin: auto;
+    color: inherit;
+}
+.portfolioStock-middle {
+    display: flex;
+    min-width: 64px;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    letter-spacing: .4px;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-right: 8px;
+    max-width: 120px;
+    text-align: right;
+}
+.portfolioStock-middleTitle {
+    color: #202124;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.portfolioStock-middlePrice {
+    color: #3c4043;
+    height: 16px;
+    overflow: hidden;
+    display: block;
+    text-align: left;
+}
+.portfolioStock-right {
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    letter-spacing: 0.4px;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: right;
+}
+.portfolioStock-rightPercent, .portfolioStock-rightChange {
+    min-width: unset;
+    font-weight: 500;
+    height: 16px;
+    overflow: hidden;
+    display: inline-block;
+    font-family: Roboto,Arial,sans-serif;
+    align-items: flex-end;
+    justify-content: flex-end;
+    white-space: nowrap;
+    text-align: right;
+}
+.portfolioStockList {
+    width: 100%;
+    display: inline-block;
+}
+.portfolioStockLeft {
+    display: inline-block;
+}
+.portfolioStockRight {
+    display: inline-block;
+}
+.positive {
+    color: #137333!important;
+    background-color: #e6f4ea!important;
+}
+.negative {
+    background: #fce8e6!important;
+    color: #c5221f!important;
+    transform: rotate(180deg);
+}
+.positiveC {
+    color: #137333!important;
+}
+.negativeC {
+    color: #c5221f!important;
+}
+
+/* Mouse Move */
+.mouseFollow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #000000;
+    filter: blur(75px);
+    position: relative;
+}
+
+/* Dark Mode */
+.container.dark {
+    box-shadow: 0px 0px 2px 2px #707070ce, 0px 0px 5px 2px #555555ce;
+    background: #555555;
+}
+.container-title-text.dark {
+    color: #ffffff;
+}
+.weatherWidget_locationText.dark, .weatherWidget_currTemp.dark, .weatherWidget_currDesc.dark, .weatherWidget_dayText.dark, .weatherWidget_dayHigh.dark, .weatherWidget_dayLow.dark {
+    color: #ffffff;
+}
+.weatherWidget_dayDiv.dark:hover {
+    background-color: #777777;
+}
+.newsWidget-textDiv.dark {
+    background-color: #81818180;
+}
+.newsWidget-textDiv.dark:hover {
+    background-color: #777777cc;
+}
+.newsWidget-title.dark, .newsWidget-text.dark, .newsWidget-date.dark {
+    color: #ffffff;
+}
+.power-switch.dark {
+    box-shadow: 0px 0px 5px 0px #aaaaaab6, 0px 0px 0px 15px #d6e0e2c4;
+}
+.portfolioStocks-header.dark, .portfolioStock-middleTitle.dark, .portfolioStock-middlePrice.dark {
+    color: #ffffff;
+}
+.portfolioStock.dark {
+    border: 1px solid #c2c4c9;
+    background: #a0a0a080;
+}
+.portfolioStock.dark:hover {
+    background-color: #8888885e;
+}
+body.dark {
+    background-color: #3a3a3a;
+}
+.mouseFollow.dark {
+    background-color: #ffffff;
+    filter: blur(35px);
+}
